@@ -46,34 +46,26 @@ def write_output_file(output: Any) -> BytesIO:
     return data_writer(output)
 
 
-# TODO: Update your path to icon
-icon_path = os.path.join("assets", "camera.png")
+# Path to icon
+icon_path = os.path.join("assets", "knapsack.png")
 
 # Set the page config to wide mode
 st.set_page_config(
-    page_title="Optimization App",
+    page_title="Knapsack App",
     page_icon=icon_path,
     layout="wide",
 )
 
 st.sidebar.image(icon_path)
 
-st.title("Optimization App")
-st.write("Welcome to the Optimization App.")
+st.title("Knapsack")
+st.write("Welcome to the Knapsack Optimization App.")
 
 # Here you load the input file
 file = st.file_uploader("Upload input file", type=[f"{INPUT_TYPE}"], on_change=upload_callback)
 
-# TODO: other parameters to your `solve_model` function
-numeric_parameter = st.sidebar.number_input("Numeric Parameter", min_value=0, value=5, step=1)
-choice_parameter = st.sidebar.radio("This is a radio", ["Choice 1", "Choice 2", "Choice 3"])
-options = st.sidebar.selectbox("This is a selectbox", ["Choice 1", "Choice 2", "Choice 3"])
-active_param = st.sidebar.checkbox("This is a checkbox")
-multiple_alternatives = st.sidebar.multiselect(
-    "This is a multiselect",
-    ["Choice 1", "Choice 2", "Choice 3"],
-    default=["Choice 3", "Choice 1"]
-)
+# Other parameters to your `solve_model` function
+capacity = st.sidebar.number_input("Capacity", min_value=0, value=21, step=1)
 
 # Start when file is ready
 if file is not None:
@@ -88,7 +80,7 @@ if file is not None:
         with st.spinner("Optimizing"):
 
             # Solve model
-            output = solve_model(st.session_state.input_data)
+            output = solve_model(st.session_state.input_data, capacity)
             st.session_state.output = output
 
 # Download output
@@ -101,5 +93,6 @@ if st.session_state.output is not None:
         mime=OUTPUT_TYPE,
     )
 
-# Additional display
-# TODO: your additional features for analytics
+    # Additional display
+    st.write("Selected Items:")
+    st.json(st.session_state.output)

@@ -1,0 +1,102 @@
+[
+    {
+        "item": 0,
+        "cost": 8,
+        "weight": 12
+    },
+    {
+        "item": 1,
+        "cost": 15,
+        "weight": 12
+    },
+    {
+        "item": 2,
+        "cost": 7,
+        "weight": 15
+    },
+    {
+        "item": 3,
+        "cost": 8,
+        "weight": 11
+    },
+    {
+        "item": 4,
+        "cost": 7,
+        "weight": 6
+    },
+    {
+        "item": 5,
+        "cost": 15,
+        "weight": 9
+    },
+    {
+        "item": 6,
+        "cost": 10,
+        "weight": 5
+    },
+    {
+        "item": 7,
+        "cost": 14,
+        "weight": 12
+    },
+    {
+        "item": 8,
+        "cost": 6,
+        "weight": 8
+    },
+    {
+        "item": 9,
+        "cost": 8,
+        "weight": 5
+    },
+    {
+        "item": 10,
+        "cost": 5,
+        "weight": 6
+    },
+    {
+        "item": 11,
+        "cost": 15,
+        "weight": 14
+    },
+    {
+        "item": 12,
+        "cost": 15,
+        "weight": 7
+    },
+    {
+        "item": 13,
+        "cost": 9,
+        "weight": 15
+    },
+    {
+        "item": 14,
+        "cost": 15,
+        "weight": 9
+    },
+    {
+        "item": 15,
+        "cost": 5,
+        "weight": 15
+    },
+    {
+        "item": 16,
+        "cost": 8,
+        "weight": 6
+    },
+    {
+        "item": 17,
+        "cost": 5,
+        "weight": 10
+    },
+    {
+        "item": 18,
+        "cost": 8,
+        "weight": 12
+    },
+    {
+        "item": 19,
+        "cost": 6,
+        "weight": 15
+    }
+]
