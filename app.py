@@ -4,14 +4,20 @@ from typing import Any
 
 import streamlit as st
 
-# from optimize.dataloader import
+from optimize.dataloader import DefaultLoader
 from optimize.model import solve_model
-# from optimize.writer import
+from optimize.writer import DefaultWriter
 
 
 # Define mime for input and output
 INPUT_TYPE = "json"
 OUTPUT_TYPE = "json"
+MULTIPLE_SHEETS = False  # In case of excel file
+
+
+# Default instances for loader and writer
+data_loader = DefaultLoader(INPUT_TYPE, MULTIPLE_SHEETS)
+data_writer = DefaultWriter(OUTPUT_TYPE)
 
 
 # Create current solution as session_state
@@ -28,24 +34,16 @@ def upload_callback():
     st.session_state.output = None
 
 
-# TODO: Define a function to write output file
-@st.cache
-def write_output_file(output: Any) -> BytesIO:
-    buffer = BytesIO()
-    # Write your output writing function
-    # Some standard options are available at `optimize.writer`
-    buffer.seek(0)
-    return buffer
-
-
-# TODO: Define a function to read input file
+# Define a function to read input file
 @st.cache
 def read_input_file(buffer: BytesIO) -> Any:
-    # Write your input reading function
-    # Some standard options are available at `optimize.dataloader`
-    data = None
-    # data = ...
-    return data
+    return data_loader(buffer)
+
+
+# Define a function to write output file
+@st.cache
+def write_output_file(output: Any) -> BytesIO:
+    return data_writer(output)
 
 
 # Path to icon

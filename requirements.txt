@@ -8,4 +8,6 @@ pyomo==6.6.*
 highspy==1.5.3
 requests==2.*
 networkx==3.*
-streamlit==1.12.*
+streamlit==1.12
+altair==4
+absl-py>=0.13
