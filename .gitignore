@@ -1,0 +1,8 @@
+venv
+/venv
+experimental
+notebooks
+drafts
+__pycache__
+assets/*.gif
+assets/*.mp4
