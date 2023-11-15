@@ -46,8 +46,8 @@ def write_output_file(output: Any) -> BytesIO:
     return data_writer(output)
 
 
-# Path to icon
-icon_path = os.path.join("assets", "icon_tsp.png")
+# TODO: Update your path to icon
+icon_path = os.path.join("assets", "camera.png")
 
 # Set the page config to wide mode
 st.set_page_config(
@@ -64,8 +64,16 @@ st.write("Welcome to the Optimization App.")
 # Here you load the input file
 file = st.file_uploader("Upload input file", type=[f"{INPUT_TYPE}"], on_change=upload_callback)
 
-# Pass this or other parameters to your solve model function
-time_limit = st.sidebar.number_input("Time limit", min_value=0, value=5, step=1)
+# TODO: other parameters to your `solve_model` function
+numeric_parameter = st.sidebar.number_input("Numeric Parameter", min_value=0, value=5, step=1)
+choice_parameter = st.sidebar.radio("This is a radio", ["Choice 1", "Choice 2", "Choice 3"])
+options = st.sidebar.selectbox("This is a selectbox", ["Choice 1", "Choice 2", "Choice 3"])
+active_param = st.sidebar.checkbox("This is a checkbox")
+multiple_alternatives = st.sidebar.multiselect(
+    "This is a multiselect",
+    ["Choice 1", "Choice 2", "Choice 3"],
+    default=["Choice 3", "Choice 1"]
+)
 
 # Start when file is ready
 if file is not None:
