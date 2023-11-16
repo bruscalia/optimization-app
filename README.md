@@ -2,10 +2,6 @@
 
 A white label repository for a streamlit numerical optimization web application.
 
-<p align="left">
-  <img src="./assets/icon_tsp.png" width="200" title="icon tsp">
-</p>
-
 ## Execution
 
 ### Python
