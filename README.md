@@ -1,6 +1,8 @@
-# optimization-app
+# knapsack-app
 
-A white label repository for a streamlit numerical optimization web application.
+![knapsack_logo](./assets/knapsack.png)
+
+A knapsack problem numerical optimization web application.
 
 ## Execution
 
