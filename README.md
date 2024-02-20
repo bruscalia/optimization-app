@@ -2,7 +2,13 @@
 
 A white label repository for a streamlit numerical optimization web application.
 
-To learn more about numerical optimization and operations research you can find more material in my [Online Course](https://www.udemy.com/course/numerical-optimization-and-operations-research-in-python/?referralCode=FC93E35606AC78F1A8C5) and [Github repository](https://github.com/bruscalia/optimization-demo-files).
+To learn more about numerical optimization and operations research you can find more material in my [Online Course](https://www.udemy.com/course/numerical-optimization-and-operations-research-in-python/?referralCode=FC93E35606AC78F1A8C5), [Medium stories](https://medium.com/@bruscalia12), and [Github repository](https://github.com/bruscalia/optimization-demo-files).
+
+## Usage
+
+1) Fork or clone this repository
+2) Modify the [model](./optimize/model.py) file to suit your problem
+3) Modify the [app](./app.py) file to select input/output type and include new elements to your own interface.
 
 ## Execution
 
