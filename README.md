@@ -2,6 +2,8 @@
 
 A white label repository for a streamlit numerical optimization web application.
 
+To learn more about numerical optimization and operations research you can find more material in my [Online Course](https://www.udemy.com/course/numerical-optimization-and-operations-research-in-python/?referralCode=FC93E35606AC78F1A8C5) and [Github repository](https://github.com/bruscalia/optimization-demo-files).
+
 ## Execution
 
 ### Python
